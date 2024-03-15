@@ -1,0 +1,30 @@
+{
+  "typeAcquisition": {
+    "include": [
+      "chai",
+      "chai-as-promised",
+      "lodash",
+      "mocha",
+      "sinon",
+      "sinon-chai"
+    ]
+  },
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "sourceMap": true
+  },
+  "include": [
+    "./scripts",
+    "./build/typechain",
+    "./hardhat.config.ts",
+    "./deploy",
+    "./test"
+  ],
+  "files": ["./hardhat.config.ts"]
+}

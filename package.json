@@ -1,0 +1,97 @@
+{
+  "name": "cycle-periphery-contracts",
+  "version": "0.0.1",
+  "description": "The smart contracts for cycle periphery",
+  "files": [
+    "contracts",
+    "build/typechain"
+  ],
+  "main": "index.ts",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.3.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@openzeppelin/merkle-tree": "^1.0.6",
+    "@typechain/ethers-v5": "^11.1.2",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.2.20",
+    "@types/lodash": "^4.14.178",
+    "@types/mocha": "^10.0.4",
+    "@types/node": "^20.11.28",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "chai": "^4.3.4",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-json": "^3.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "ethereum-waffle": "4.0.10",
+    "ethers": "5.6.2",
+    "ethlint": "^1.2.5",
+    "hardhat": "^2.19.0",
+    "hardhat-deploy": "^0.11.43",
+    "hardhat-gas-reporter": "^1.0.4",
+    "hardhat-spdx-license-identifier": "^2.0.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "prettier": "^3.0.3",
+    "prettier-plugin-solidity": "^1.0.0-beta.11",
+    "shelljs": "^0.8.4",
+    "solhint": "^4.0.0",
+    "solhint-plugin-prettier": "0.1.0",
+    "solidity-coverage": "^0.8.5",
+    "solidity-docgen": "^0.6.0-beta.36",
+    "ts-generator": "^0.1.1",
+    "ts-node": "^10.0.0",
+    "typechain": "^8.3.2",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "lint": "npm run lint:ts && npm run lint:sol && npm run lint:json",
+    "lint:fix": "npm run lint:fix:ts && npm run lint:fix:sol && npm run lint:fix:json",
+    "lint:ts": "eslint --ext ts test/ && eslint --ext ts deploy/ && prettier --list-different {test,deploy}/**/*.ts",
+    "lint:fix:ts": "eslint --ext ts --fix test/ && eslint --ext ts --fix deploy/ && prettier --write {test,deploy}/**/*.ts",
+    "lint:json": "eslint --ext json deployments/ && prettier --list-different deployments/**/*.json",
+    "lint:fix:json": "eslint --ext json deployments/ && prettier --write deployments/**/*.json",
+    "lint:sol": "solhint 'contracts/**/*.sol'",
+    "lint:fix:sol": "prettier --write 'contracts/**/*.sol' && solhint 'contracts/**/*.sol' --fix",
+    "build": "hardhat compile",
+    "test": "hardhat test",
+    "coverage": "export CODE_COVERAGE=true && hardhat coverage --temp ./build/artifacts ; unset CODE_COVERAGE",
+    "deploy": "hardhat deploy",
+    "start": "hardhat node --show-accounts",
+    "fork": "export FORK_MAINNET=true && hardhat node --fork-deployments mainnet --as-network localhost --show-accounts ; unset FORK_MAINNET",
+    "prepare": "npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "config": {
+    "eslintPaths": "test/ deploy/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RollNA/cycle-periphery-contracts.git"
+  },
+  "keywords": [
+    "cryptocurrency",
+    "interoperability",
+    "bitcoin",
+    "ethereum",
+    "defi"
+  ],
+  "author": "thomas",
+  "license": "MIT",
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix"
+  }
+}

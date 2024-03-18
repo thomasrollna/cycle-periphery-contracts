@@ -97,13 +97,22 @@ describe("Integrate", () => {
       await manager.addRoot(root)
       expect(await manager.merkleRootExist(root)).eq(true)
 
-      expect(await manager.check('1', dev.address, root, proof)).eq(true)
+      expect(await manager.verified(dev.address)).eq(false)
 
-      for (let i = 0; i < 5; i++) {
+      await expect(minter.onMessageReceived(
+        dev.address,
+        networkId,
+        data
+      ))
+      .changeTokenBalance(nft, dev.address, 1)
+
+      expect(await manager.verified(dev.address)).eq(true)
+
+      for (let i = 1; i < 5; i++) {
         await expect(minter.onMessageReceived(
             dev.address,
             networkId,
-            data
+            '0x'
         ))
         .changeTokenBalance(nft, dev.address, 1)
       }
@@ -111,7 +120,7 @@ describe("Integrate", () => {
       await expect(minter.onMessageReceived(
         dev.address,
         networkId,
-        data
+        '0x'
       )).to.be.revertedWith('ExcceedMaxTimes')
 
       await expect(minter.onMessageReceived(

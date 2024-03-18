@@ -10,6 +10,8 @@ contract WhiteListManager is Ownable, IWhiteListManager {
 
     mapping(bytes32 => bool) public merkleRootExist;
 
+    mapping(address => bool) public verified;
+
     event AddRoot(bytes32);
 
     constructor() Ownable(msg.sender) {}
@@ -19,13 +21,17 @@ contract WhiteListManager is Ownable, IWhiteListManager {
         emit AddRoot(merkleRoot);
     }
 
-    function check(
+    function verify(
         uint256 index,
         address account,
         bytes32 merkleRoot,
         bytes32[] calldata merkleProof
-    ) external view returns (bool) {
-        return merkleRootExist[merkleRoot] &&
-               MerkleProof.verify(merkleProof, merkleRoot, keccak256(bytes.concat(keccak256(abi.encode(index, account)))));
+    ) external returns (bool) {
+        if (merkleRootExist[merkleRoot] &&
+            MerkleProof.verify(merkleProof, merkleRoot, keccak256(bytes.concat(keccak256(abi.encode(index, account)))))) {
+            verified[account] = true;
+            return true;
+        }
+        return false;
     }
 }

@@ -14,7 +14,7 @@ contract Minter is Ownable {
 
     error ExcceedMaxTimes();
 
-    uint32 public constant MAX_FEE_MINT_TIMES = 1;
+    uint32 public constant MAX_FREE_MINT_TIMES = 1;
 
     uint32 public constant MAX_WHITE_LIST_MINT_TIMES = 5;
 
@@ -38,22 +38,21 @@ contract Minter is Ownable {
         bytes memory data
     ) external payable onlyOwner {
         uint32 times = mintTimes[originAddress][originNetwork];
-        if (data.length == 0) {
-            if (times >= MAX_FEE_MINT_TIMES) {
-                revert ExcceedMaxTimes();
-            }
-        } else {
+        bool verified = IWhiteListManager(whiteListManager).verified(originAddress);
+
+        if (!verified && data.length > 0) {
             (uint256 index, address account, bytes32 merkleRoot, bytes32[] memory merkleProof) = abi.decode(data, (uint256, address, bytes32, bytes32[]));
             if (account != originAddress) {
                 revert InvalidProof();
             }
-            if (!IWhiteListManager(whiteListManager).check(index, account, merkleRoot, merkleProof)) {
+            if (!IWhiteListManager(whiteListManager).verify(index, account, merkleRoot, merkleProof)) {
                 revert NotAllow();
             }
-            
-            if (times >= MAX_WHITE_LIST_MINT_TIMES) {
-                revert ExcceedMaxTimes();
-            }
+            verified = true;
+        }
+
+        if (times >= (verified ? MAX_WHITE_LIST_MINT_TIMES : MAX_FREE_MINT_TIMES)) {
+            revert ExcceedMaxTimes();
         }
 
         mintTimes[originAddress][originNetwork] = times + 1;

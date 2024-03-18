@@ -1,0 +1,310 @@
+{
+  "address": "0x4e95E2c3d2456502889aDe7D4eF3bea43273394E",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnableInvalidOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "OwnableUnauthorizedAccount",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "AddRoot",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "merkleRoot",
+          "type": "bytes32"
+        }
+      ],
+      "name": "addRoot",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "merkleRootExist",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "verified",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "merkleRoot",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "merkleProof",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "verify",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x378df3be8d08b722299c3b73ef52c89c3c9e8395dfc1bdcc6aab62770b7d13c6",
+  "receipt": {
+    "to": null,
+    "from": "0xB7bC62C9380448271395d426230D6A4064E87217",
+    "contractAddress": "0x4e95E2c3d2456502889aDe7D4eF3bea43273394E",
+    "transactionIndex": 0,
+    "gasUsed": "427897",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000800000000000000000000000000000000004000000000000000000080000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000020000000000000000020800000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000020000000000000000000000000000000000000000000400000000000000000000000",
+    "blockHash": "0xab85678b9ab1967a0a21ce92c8afbbed998ad97e4339f470b02c763653fb8561",
+    "transactionHash": "0x378df3be8d08b722299c3b73ef52c89c3c9e8395dfc1bdcc6aab62770b7d13c6",
+    "logs": [
+      {
+        "transactionIndex": 0,
+        "blockNumber": 41759,
+        "transactionHash": "0x378df3be8d08b722299c3b73ef52c89c3c9e8395dfc1bdcc6aab62770b7d13c6",
+        "address": "0x4e95E2c3d2456502889aDe7D4eF3bea43273394E",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x000000000000000000000000b7bc62c9380448271395d426230d6a4064e87217"
+        ],
+        "data": "0x",
+        "logIndex": 0,
+        "blockHash": "0xab85678b9ab1967a0a21ce92c8afbbed998ad97e4339f470b02c763653fb8561"
+      }
+    ],
+    "blockNumber": 41759,
+    "cumulativeGasUsed": "427897",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "d04ca63b2be6f24dbe8380d2735cb438",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"OwnableInvalidOwner\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"OwnableUnauthorizedAccount\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"AddRoot\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"merkleRoot\",\"type\":\"bytes32\"}],\"name\":\"addRoot\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"merkleRootExist\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"verified\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"merkleRoot\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"merkleProof\",\"type\":\"bytes32[]\"}],\"name\":\"verify\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"errors\":{\"OwnableInvalidOwner(address)\":[{\"details\":\"The owner is not a valid owner account. (eg. `address(0)`)\"}],\"OwnableUnauthorizedAccount(address)\":[{\"details\":\"The caller account is not authorized to perform an operation.\"}]},\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/WhiteListManager.sol\":\"WhiteListManager\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":2000},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.0.0) (access/Ownable.sol)\\n\\npragma solidity ^0.8.20;\\n\\nimport {Context} from \\\"../utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * The initial owner is set to the address provided by the deployer. This can\\n * later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    /**\\n     * @dev The caller account is not authorized to perform an operation.\\n     */\\n    error OwnableUnauthorizedAccount(address account);\\n\\n    /**\\n     * @dev The owner is not a valid owner account. (eg. `address(0)`)\\n     */\\n    error OwnableInvalidOwner(address owner);\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the address provided by the deployer as the initial owner.\\n     */\\n    constructor(address initialOwner) {\\n        if (initialOwner == address(0)) {\\n            revert OwnableInvalidOwner(address(0));\\n        }\\n        _transferOwnership(initialOwner);\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        _checkOwner();\\n        _;\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if the sender is not the owner.\\n     */\\n    function _checkOwner() internal view virtual {\\n        if (owner() != _msgSender()) {\\n            revert OwnableUnauthorizedAccount(_msgSender());\\n        }\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby disabling any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        _transferOwnership(address(0));\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        if (newOwner == address(0)) {\\n            revert OwnableInvalidOwner(address(0));\\n        }\\n        _transferOwnership(newOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Internal function without access restriction.\\n     */\\n    function _transferOwnership(address newOwner) internal virtual {\\n        address oldOwner = _owner;\\n        _owner = newOwner;\\n        emit OwnershipTransferred(oldOwner, newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.0.1) (utils/Context.sol)\\n\\npragma solidity ^0.8.20;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n\\n    function _contextSuffixLength() internal view virtual returns (uint256) {\\n        return 0;\\n    }\\n}\\n\",\"keccak256\":\"0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/cryptography/MerkleProof.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.0.0) (utils/cryptography/MerkleProof.sol)\\n\\npragma solidity ^0.8.20;\\n\\n/**\\n * @dev These functions deal with verification of Merkle Tree proofs.\\n *\\n * The tree and the proofs can be generated using our\\n * https://github.com/OpenZeppelin/merkle-tree[JavaScript library].\\n * You will find a quickstart guide in the readme.\\n *\\n * WARNING: You should avoid using leaf values that are 64 bytes long prior to\\n * hashing, or use a hash function other than keccak256 for hashing leaves.\\n * This is because the concatenation of a sorted pair of internal nodes in\\n * the Merkle tree could be reinterpreted as a leaf value.\\n * OpenZeppelin's JavaScript library generates Merkle trees that are safe\\n * against this attack out of the box.\\n */\\nlibrary MerkleProof {\\n    /**\\n     *@dev The multiproof provided is not valid.\\n     */\\n    error MerkleProofInvalidMultiproof();\\n\\n    /**\\n     * @dev Returns true if a `leaf` can be proved to be a part of a Merkle tree\\n     * defined by `root`. For this, a `proof` must be provided, containing\\n     * sibling hashes on the branch from the leaf to the root of the tree. Each\\n     * pair of leaves and each pair of pre-images are assumed to be sorted.\\n     */\\n    function verify(bytes32[] memory proof, bytes32 root, bytes32 leaf) internal pure returns (bool) {\\n        return processProof(proof, leaf) == root;\\n    }\\n\\n    /**\\n     * @dev Calldata version of {verify}\\n     */\\n    function verifyCalldata(bytes32[] calldata proof, bytes32 root, bytes32 leaf) internal pure returns (bool) {\\n        return processProofCalldata(proof, leaf) == root;\\n    }\\n\\n    /**\\n     * @dev Returns the rebuilt hash obtained by traversing a Merkle tree up\\n     * from `leaf` using `proof`. A `proof` is valid if and only if the rebuilt\\n     * hash matches the root of the tree. When processing the proof, the pairs\\n     * of leafs & pre-images are assumed to be sorted.\\n     */\\n    function processProof(bytes32[] memory proof, bytes32 leaf) internal pure returns (bytes32) {\\n        bytes32 computedHash = leaf;\\n        for (uint256 i = 0; i < proof.length; i++) {\\n            computedHash = _hashPair(computedHash, proof[i]);\\n        }\\n        return computedHash;\\n    }\\n\\n    /**\\n     * @dev Calldata version of {processProof}\\n     */\\n    function processProofCalldata(bytes32[] calldata proof, bytes32 leaf) internal pure returns (bytes32) {\\n        bytes32 computedHash = leaf;\\n        for (uint256 i = 0; i < proof.length; i++) {\\n            computedHash = _hashPair(computedHash, proof[i]);\\n        }\\n        return computedHash;\\n    }\\n\\n    /**\\n     * @dev Returns true if the `leaves` can be simultaneously proven to be a part of a Merkle tree defined by\\n     * `root`, according to `proof` and `proofFlags` as described in {processMultiProof}.\\n     *\\n     * CAUTION: Not all Merkle trees admit multiproofs. See {processMultiProof} for details.\\n     */\\n    function multiProofVerify(\\n        bytes32[] memory proof,\\n        bool[] memory proofFlags,\\n        bytes32 root,\\n        bytes32[] memory leaves\\n    ) internal pure returns (bool) {\\n        return processMultiProof(proof, proofFlags, leaves) == root;\\n    }\\n\\n    /**\\n     * @dev Calldata version of {multiProofVerify}\\n     *\\n     * CAUTION: Not all Merkle trees admit multiproofs. See {processMultiProof} for details.\\n     */\\n    function multiProofVerifyCalldata(\\n        bytes32[] calldata proof,\\n        bool[] calldata proofFlags,\\n        bytes32 root,\\n        bytes32[] memory leaves\\n    ) internal pure returns (bool) {\\n        return processMultiProofCalldata(proof, proofFlags, leaves) == root;\\n    }\\n\\n    /**\\n     * @dev Returns the root of a tree reconstructed from `leaves` and sibling nodes in `proof`. The reconstruction\\n     * proceeds by incrementally reconstructing all inner nodes by combining a leaf/inner node with either another\\n     * leaf/inner node or a proof sibling node, depending on whether each `proofFlags` item is true or false\\n     * respectively.\\n     *\\n     * CAUTION: Not all Merkle trees admit multiproofs. To use multiproofs, it is sufficient to ensure that: 1) the tree\\n     * is complete (but not necessarily perfect), 2) the leaves to be proven are in the opposite order they are in the\\n     * tree (i.e., as seen from right to left starting at the deepest layer and continuing at the next layer).\\n     */\\n    function processMultiProof(\\n        bytes32[] memory proof,\\n        bool[] memory proofFlags,\\n        bytes32[] memory leaves\\n    ) internal pure returns (bytes32 merkleRoot) {\\n        // This function rebuilds the root hash by traversing the tree up from the leaves. The root is rebuilt by\\n        // consuming and producing values on a queue. The queue starts with the `leaves` array, then goes onto the\\n        // `hashes` array. At the end of the process, the last hash in the `hashes` array should contain the root of\\n        // the Merkle tree.\\n        uint256 leavesLen = leaves.length;\\n        uint256 proofLen = proof.length;\\n        uint256 totalHashes = proofFlags.length;\\n\\n        // Check proof validity.\\n        if (leavesLen + proofLen != totalHashes + 1) {\\n            revert MerkleProofInvalidMultiproof();\\n        }\\n\\n        // The xxxPos values are \\\"pointers\\\" to the next value to consume in each array. All accesses are done using\\n        // `xxx[xxxPos++]`, which return the current value and increment the pointer, thus mimicking a queue's \\\"pop\\\".\\n        bytes32[] memory hashes = new bytes32[](totalHashes);\\n        uint256 leafPos = 0;\\n        uint256 hashPos = 0;\\n        uint256 proofPos = 0;\\n        // At each step, we compute the next hash using two values:\\n        // - a value from the \\\"main queue\\\". If not all leaves have been consumed, we get the next leaf, otherwise we\\n        //   get the next hash.\\n        // - depending on the flag, either another value from the \\\"main queue\\\" (merging branches) or an element from the\\n        //   `proof` array.\\n        for (uint256 i = 0; i < totalHashes; i++) {\\n            bytes32 a = leafPos < leavesLen ? leaves[leafPos++] : hashes[hashPos++];\\n            bytes32 b = proofFlags[i]\\n                ? (leafPos < leavesLen ? leaves[leafPos++] : hashes[hashPos++])\\n                : proof[proofPos++];\\n            hashes[i] = _hashPair(a, b);\\n        }\\n\\n        if (totalHashes > 0) {\\n            if (proofPos != proofLen) {\\n                revert MerkleProofInvalidMultiproof();\\n            }\\n            unchecked {\\n                return hashes[totalHashes - 1];\\n            }\\n        } else if (leavesLen > 0) {\\n            return leaves[0];\\n        } else {\\n            return proof[0];\\n        }\\n    }\\n\\n    /**\\n     * @dev Calldata version of {processMultiProof}.\\n     *\\n     * CAUTION: Not all Merkle trees admit multiproofs. See {processMultiProof} for details.\\n     */\\n    function processMultiProofCalldata(\\n        bytes32[] calldata proof,\\n        bool[] calldata proofFlags,\\n        bytes32[] memory leaves\\n    ) internal pure returns (bytes32 merkleRoot) {\\n        // This function rebuilds the root hash by traversing the tree up from the leaves. The root is rebuilt by\\n        // consuming and producing values on a queue. The queue starts with the `leaves` array, then goes onto the\\n        // `hashes` array. At the end of the process, the last hash in the `hashes` array should contain the root of\\n        // the Merkle tree.\\n        uint256 leavesLen = leaves.length;\\n        uint256 proofLen = proof.length;\\n        uint256 totalHashes = proofFlags.length;\\n\\n        // Check proof validity.\\n        if (leavesLen + proofLen != totalHashes + 1) {\\n            revert MerkleProofInvalidMultiproof();\\n        }\\n\\n        // The xxxPos values are \\\"pointers\\\" to the next value to consume in each array. All accesses are done using\\n        // `xxx[xxxPos++]`, which return the current value and increment the pointer, thus mimicking a queue's \\\"pop\\\".\\n        bytes32[] memory hashes = new bytes32[](totalHashes);\\n        uint256 leafPos = 0;\\n        uint256 hashPos = 0;\\n        uint256 proofPos = 0;\\n        // At each step, we compute the next hash using two values:\\n        // - a value from the \\\"main queue\\\". If not all leaves have been consumed, we get the next leaf, otherwise we\\n        //   get the next hash.\\n        // - depending on the flag, either another value from the \\\"main queue\\\" (merging branches) or an element from the\\n        //   `proof` array.\\n        for (uint256 i = 0; i < totalHashes; i++) {\\n            bytes32 a = leafPos < leavesLen ? leaves[leafPos++] : hashes[hashPos++];\\n            bytes32 b = proofFlags[i]\\n                ? (leafPos < leavesLen ? leaves[leafPos++] : hashes[hashPos++])\\n                : proof[proofPos++];\\n            hashes[i] = _hashPair(a, b);\\n        }\\n\\n        if (totalHashes > 0) {\\n            if (proofPos != proofLen) {\\n                revert MerkleProofInvalidMultiproof();\\n            }\\n            unchecked {\\n                return hashes[totalHashes - 1];\\n            }\\n        } else if (leavesLen > 0) {\\n            return leaves[0];\\n        } else {\\n            return proof[0];\\n        }\\n    }\\n\\n    /**\\n     * @dev Sorts the pair (a, b) and hashes the result.\\n     */\\n    function _hashPair(bytes32 a, bytes32 b) private pure returns (bytes32) {\\n        return a < b ? _efficientHash(a, b) : _efficientHash(b, a);\\n    }\\n\\n    /**\\n     * @dev Implementation of keccak256(abi.encode(a, b)) that doesn't allocate or expand memory.\\n     */\\n    function _efficientHash(bytes32 a, bytes32 b) private pure returns (bytes32 value) {\\n        /// @solidity memory-safe-assembly\\n        assembly {\\n            mstore(0x00, a)\\n            mstore(0x20, b)\\n            value := keccak256(0x00, 0x40)\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x6400c4bee15052e043e5d10315135972529bd1c8012f43da494dc6b4f4661058\",\"license\":\"MIT\"},\"contracts/WhiteListManager.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.20;\\n\\nimport { MerkleProof } from \\\"@openzeppelin/contracts/utils/cryptography/MerkleProof.sol\\\";\\nimport { Ownable } from \\\"@openzeppelin/contracts/access/Ownable.sol\\\";\\nimport { IWhiteListManager } from \\\"./interfaces/IWhiteListManager.sol\\\";\\n\\ncontract WhiteListManager is Ownable, IWhiteListManager {\\n\\n    mapping(bytes32 => bool) public merkleRootExist;\\n\\n    mapping(address => bool) public verified;\\n\\n    event AddRoot(bytes32);\\n\\n    constructor() Ownable(msg.sender) {}\\n\\n    function addRoot(bytes32 merkleRoot) external onlyOwner {\\n        merkleRootExist[merkleRoot] = true;\\n        emit AddRoot(merkleRoot);\\n    }\\n\\n    function verify(\\n        uint256 index,\\n        address account,\\n        bytes32 merkleRoot,\\n        bytes32[] calldata merkleProof\\n    ) external returns (bool) {\\n        if (merkleRootExist[merkleRoot] &&\\n            MerkleProof.verify(merkleProof, merkleRoot, keccak256(bytes.concat(keccak256(abi.encode(index, account)))))) {\\n            verified[account] = true;\\n            return true;\\n        }\\n        return false;\\n    }\\n}\",\"keccak256\":\"0xf453c6a0e36f85f6d02a49e4fedaf60a5aeaea2eaafa6e56fb059393fed3ee7e\",\"license\":\"MIT\"},\"contracts/interfaces/IWhiteListManager.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.20;\\n\\ninterface IWhiteListManager {\\n    function addRoot(bytes32 merkleRoot) external;\\n\\n    function verified(address account) external view returns (bool);\\n\\n    function verify(\\n        uint256 index,\\n        address account,\\n        bytes32 merkleRoot,\\n        bytes32[] calldata merkleProof\\n    ) external returns (bool);\\n}\",\"keccak256\":\"0x32e23cc8f941a0327a898421a2139c747c6d1b81ab89b59931beb7282b91bc3e\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50338061003757604051631e4fbdf760e01b81526000600482015260240160405180910390fd5b61004081610046565b50610096565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b610657806100a56000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c80638a45fa2f1161005b5780638a45fa2f146100e75780638da5cb5b146100fa578063d59e646114610122578063f2fde38b1461013557600080fd5b80630db065f414610082578063649355bb146100ba578063715018a6146100dd575b600080fd5b6100a56100903660046104c8565b60026020526000908152604090205460ff1681565b60405190151581526020015b60405180910390f35b6100a56100c83660046104e3565b60016020526000908152604090205460ff1681565b6100e5610148565b005b6100a56100f53660046104fc565b61015c565b60005460405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100b1565b6100e56101303660046104e3565b610280565b6100e56101433660046104c8565b6102d9565b610150610342565b61015a6000610395565b565b60008381526001602052604081205460ff1680156102355750610235838380806020026020016040519081016040528093929190818152602001838360200280828437600092019190915250506040518892506101df91508a908a9060200191825273ffffffffffffffffffffffffffffffffffffffff16602082015260400190565b604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0818403018152828252805160209182012090830152016040516020818303038152906040528051906020012061040a565b15610273575073ffffffffffffffffffffffffffffffffffffffff84166000908152600260205260409020805460ff19166001908117909155610277565b5060005b95945050505050565b610288610342565b600081815260016020818152604092839020805460ff191690921790915590518281527fd80c681b4765aa72d18c1ff39f781ef9d9a6eda4360ae6d0316e7f43d3df6536910160405180910390a150565b6102e1610342565b73ffffffffffffffffffffffffffffffffffffffff8116610336576040517f1e4fbdf7000000000000000000000000000000000000000000000000000000008152600060048201526024015b60405180910390fd5b61033f81610395565b50565b60005473ffffffffffffffffffffffffffffffffffffffff16331461015a576040517f118cdaa700000000000000000000000000000000000000000000000000000000815233600482015260240161032d565b6000805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b6000826104178584610420565b14949350505050565b600081815b8451811015610465576104518286838151811061044457610444610593565b602002602001015161046d565b91508061045d816105c2565b915050610425565b509392505050565b6000818310610489576000828152602084905260409020610498565b60008381526020839052604090205b9392505050565b803573ffffffffffffffffffffffffffffffffffffffff811681146104c357600080fd5b919050565b6000602082840312156104da57600080fd5b6104988261049f565b6000602082840312156104f557600080fd5b5035919050565b60008060008060006080868803121561051457600080fd5b853594506105246020870161049f565b935060408601359250606086013567ffffffffffffffff8082111561054857600080fd5b818801915088601f83011261055c57600080fd5b81358181111561056b57600080fd5b8960208260051b850101111561058057600080fd5b9699959850939650602001949392505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff820361061a577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b506001019056fea26469706673582212208b25cb4280918feb8ee8c3635810e5bb5a5b6f54cedc32fa4ebc4b639147063164736f6c63430008140033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c80638a45fa2f1161005b5780638a45fa2f146100e75780638da5cb5b146100fa578063d59e646114610122578063f2fde38b1461013557600080fd5b80630db065f414610082578063649355bb146100ba578063715018a6146100dd575b600080fd5b6100a56100903660046104c8565b60026020526000908152604090205460ff1681565b60405190151581526020015b60405180910390f35b6100a56100c83660046104e3565b60016020526000908152604090205460ff1681565b6100e5610148565b005b6100a56100f53660046104fc565b61015c565b60005460405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100b1565b6100e56101303660046104e3565b610280565b6100e56101433660046104c8565b6102d9565b610150610342565b61015a6000610395565b565b60008381526001602052604081205460ff1680156102355750610235838380806020026020016040519081016040528093929190818152602001838360200280828437600092019190915250506040518892506101df91508a908a9060200191825273ffffffffffffffffffffffffffffffffffffffff16602082015260400190565b604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0818403018152828252805160209182012090830152016040516020818303038152906040528051906020012061040a565b15610273575073ffffffffffffffffffffffffffffffffffffffff84166000908152600260205260409020805460ff19166001908117909155610277565b5060005b95945050505050565b610288610342565b600081815260016020818152604092839020805460ff191690921790915590518281527fd80c681b4765aa72d18c1ff39f781ef9d9a6eda4360ae6d0316e7f43d3df6536910160405180910390a150565b6102e1610342565b73ffffffffffffffffffffffffffffffffffffffff8116610336576040517f1e4fbdf7000000000000000000000000000000000000000000000000000000008152600060048201526024015b60405180910390fd5b61033f81610395565b50565b60005473ffffffffffffffffffffffffffffffffffffffff16331461015a576040517f118cdaa700000000000000000000000000000000000000000000000000000000815233600482015260240161032d565b6000805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b6000826104178584610420565b14949350505050565b600081815b8451811015610465576104518286838151811061044457610444610593565b602002602001015161046d565b91508061045d816105c2565b915050610425565b509392505050565b6000818310610489576000828152602084905260409020610498565b60008381526020839052604090205b9392505050565b803573ffffffffffffffffffffffffffffffffffffffff811681146104c357600080fd5b919050565b6000602082840312156104da57600080fd5b6104988261049f565b6000602082840312156104f557600080fd5b5035919050565b60008060008060006080868803121561051457600080fd5b853594506105246020870161049f565b935060408601359250606086013567ffffffffffffffff8082111561054857600080fd5b818801915088601f83011261055c57600080fd5b81358181111561056b57600080fd5b8960208260051b850101111561058057600080fd5b9699959850939650602001949392505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff820361061a577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b506001019056fea26469706673582212208b25cb4280918feb8ee8c3635810e5bb5a5b6f54cedc32fa4ebc4b639147063164736f6c63430008140033",
+  "devdoc": {
+    "errors": {
+      "OwnableInvalidOwner(address)": [
+        {
+          "details": "The owner is not a valid owner account. (eg. `address(0)`)"
+        }
+      ],
+      "OwnableUnauthorizedAccount(address)": [
+        {
+          "details": "The caller account is not authorized to perform an operation."
+        }
+      ]
+    },
+    "kind": "dev",
+    "methods": {
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 8,
+        "contract": "contracts/WhiteListManager.sol:WhiteListManager",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 906,
+        "contract": "contracts/WhiteListManager.sol:WhiteListManager",
+        "label": "merkleRootExist",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_bytes32,t_bool)"
+      },
+      {
+        "astId": 910,
+        "contract": "contracts/WhiteListManager.sol:WhiteListManager",
+        "label": "verified",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_bool)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_bytes32,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      }
+    }
+  }
+}

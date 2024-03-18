@@ -10,7 +10,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await getNamedAccounts()
 
   const testing = isHardhat(await getChainId())
-  const initialOwner = testing ? deployer : '' // TODO: PolygonZkEVMBridge
+  const initialOwner = testing ? deployer : '0x5AD31B262855c1dE6788E5497EC0591D25C9a8c2' // PolygonZkEVMBridge
 
   await deploy(tag, {
     from: deployer,

@@ -67,4 +67,8 @@ contract Minter is Ownable {
 
         IERC721Mintable(nftAddress).mintFor(originAddress, currentId++);
     }
+
+    function mintFor(address to) external onlyOwner {
+        IERC721Mintable(nftAddress).mintFor(to, currentId++);
+    }
 }

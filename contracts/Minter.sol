@@ -24,19 +24,27 @@ contract Minter is Ownable {
 
     address public immutable nftAddress;
 
+    address public immutable operator;
+
     // user address => networkId => mintTimes
     mapping(address => mapping(uint32 => uint32)) public mintTimes;
 
-    constructor(address initialOwner, address _nftAddress, address _whiteListManager) Ownable(initialOwner) {
+    modifier onlyOperator() {
+        require(operator == msg.sender, "invalid operator");
+        _;
+    }
+
+    constructor(address _operator, address _nftAddress, address _whiteListManager) Ownable(msg.sender) {
         nftAddress = _nftAddress;
         whiteListManager = _whiteListManager;
+        operator = _operator;
     }
 
     function onMessageReceived(
         address originAddress,
         uint32 originNetwork,
         bytes memory data
-    ) external payable onlyOwner {
+    ) external payable onlyOperator {
         uint32 times = mintTimes[originAddress][originNetwork];
         bool verified = IWhiteListManager(whiteListManager).verified(originAddress);
 
